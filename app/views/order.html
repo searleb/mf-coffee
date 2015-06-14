@@ -1,4 +1,4 @@
-<h3>Your Order, Please?</h3>
+<h3 class="md-headline">Your Order, Please?</h3>
 <md-card layout-padding>
 	<form name="orderForm">
 		<md-input-container>
@@ -19,18 +19,18 @@
 		
 		<md-button type="submit" class="md-raised" ng-click="addOrder(newOrder);newOrder = null;">Order</md-button>
 
-		<md-button type="submit" class="btn btn-default" ng-really-message="Are you sure?" ng-really-click="empty()">Clear</md-button>
+		<md-button type="submit" class="btn btn-default" ng-really-message="Are you sure?" ng-really-click="empty()">Clear All</md-button>
 	</form>
 </md-card>
 
 <md-card ng-show="orders.length">
 	<md-list>
 		<md-list-item ng-repeat="order in orders | reverse">
-			<div class="md-list-item text" layout-padding>
-			      <h3>{{order.details.order}}</h3>
-			      <h4>{{order.details.name}}dog</h4>
-			      <p>{{order.details.notes}}</p>
-			      <small>{{order.details.time | date:'HH:mm EEE, MMM-yy'}}</small>
+			<div class="md-list-item-text" layout-padding>
+			      <h3 class="md-headline">{{order.details.order}}</h3>
+			      <p class="md-caption">{{order.details.notes}}</p>
+			      <h4 class="md-subhead">{{order.details.name}}dog</h4>
+			      <small class="md-caption">{{order.details.time | date:'HH:mm EEE, MMM-yy'}}</small>
 			      <md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>
 			</div>
 			<md-divider ng-if="!$last"></md-divider>
