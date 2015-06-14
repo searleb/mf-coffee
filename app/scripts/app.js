@@ -16,5 +16,11 @@ angular.module('mfcoffeeApp', [
     'ngSanitize',
     'ngTouch',
     'firebase',
-    'firebase.ref'
-  ]);
+    'firebase.ref',
+    'ngMaterial',
+  ])
+.config(function($mdThemingProvider) {
+  $mdThemingProvider.theme('default')
+    .primaryPalette('pink')
+    .accentPalette('orange');
+});
