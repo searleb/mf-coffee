@@ -21,6 +21,6 @@ angular.module('mfcoffeeApp', [
   ])
 .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
-    .primaryPalette('green')
-    .accentPalette('blue');
+    .primaryPalette('brown')
+    .accentPalette('deep-purple');
 });

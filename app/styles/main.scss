@@ -10,8 +10,19 @@ $media-md: "(min-width : 992px)";
 /* Large Devices, Wide Screens */
 $media-lg: "(min-width : 1200px)";
 
-.body{
+body{
   background-color: #F4F3EE;
+  color: #333333;
+}
+md-list{
+  padding: 0px;
+}
+.md-list-item-text{
+  h3,h4,p{
+    text-decoration: capitalize;
+    margin: 0px;
+  }
+  margin-bottom: 6px;
 }
 .container{
   margin: auto;
