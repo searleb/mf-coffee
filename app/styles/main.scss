@@ -10,6 +10,9 @@ $media-md: "(min-width : 992px)";
 /* Large Devices, Wide Screens */
 $media-lg: "(min-width : 1200px)";
 
+.body{
+  background-color: #F4F3EE;
+}
 .container{
   margin: auto;
   @media #{$media-xs}{
