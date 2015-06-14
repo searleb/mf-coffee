@@ -34,7 +34,6 @@ body {
 .footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
@@ -81,5 +80,15 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+}
+
+#order-list{
+  list-style: none;
+  .bullet{
+      height: 20px;
+      position: relative;
+      left: -38px;
+      top: 43px;
   }
 }
