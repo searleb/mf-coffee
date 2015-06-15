@@ -25,6 +25,7 @@ angular.module('mfcoffeeApp')
       var list = $scope.orders;
       for (var i = 0; i < list.length; i++) {
         var item = list[i]
+        console.log(item);
         list.$remove(item);
       };
     };
@@ -38,12 +39,19 @@ angular.module('mfcoffeeApp')
           var cookieInfo = [newOrder.name, newOrder.order, newOrder.notes];
           $cookies.put('mfcoffee', cookieInfo);
           newOrder.time = Firebase.ServerValue.TIMESTAMP;
+          newOrder.complete = false;
         // push an order to the end of the array
         $scope.orders.$add({details:newOrder})
           // display any errors
           .catch(alert);
       }
     };
+
+    $scope.updateModel = function(id){
+      var toUpdate = $scope.orders.$indexFor(id);
+      $scope.orders.$save(toUpdate);
+    };
+    
 
     function alert(msg) {
       $scope.err = msg;
