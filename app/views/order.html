@@ -31,7 +31,7 @@
 			      <p class="md-caption">{{order.details.notes}}</p>
 			      <h4 class="md-subhead">{{order.details.name}}dog</h4>
 			      <small class="md-caption">{{order.details.time | date:'HH:mm EEE, MMM-yy'}}</small>
-			      <md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>
+			      <md-checkbox aria-label="checkbox" class="md-secondary" ng-model="order.details.complete" ng-true-value="true" ng-false-value="false" ng-change="updateModel(order.$id)"></md-checkbox>
 			</div>
 			<md-divider ng-if="!$last"></md-divider>
 		</md-list-item>
