@@ -36,8 +36,8 @@ angular.module('mfcoffeeApp')
     // provide a method for adding an order
     $scope.addOrder = function(newOrder) {
       if( newOrder ) {
-          var isWhiskey = newOrder.order.toLowerCase().indexOf("whiskey");
-          if (isWhiskey >= 0) {
+          var isWhiskey = newOrder.order.toLowerCase().indexOf("whisk");
+          if (isWhiskey <= 0) {
             newOrder.whiskey = true;
           }; 
           var cookieInfo = [newOrder.name, newOrder.order, newOrder.notes];
