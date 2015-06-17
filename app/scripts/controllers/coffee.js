@@ -25,7 +25,6 @@ angular.module('mfcoffeeApp')
       var list = $scope.orders;
       for (var i = 0; i < list.length; i++) {
         var item = list[i]
-        console.log(item);
         list.$remove(item);
       };
     };
@@ -37,9 +36,12 @@ angular.module('mfcoffeeApp')
     $scope.addOrder = function(newOrder) {
       if( newOrder ) {
           var isWhiskey = newOrder.order.toLowerCase().indexOf("whisk");
-          if (isWhiskey >= 0) {
+          var isBigMac = newOrder.order.toLowerCase().indexOf("big mac");
+          if (isWhiskey != -1) {
             newOrder.whiskey = true;
-          }; 
+          } else if (isBigMac != -1) {
+              newOrder.bigmac = true
+          };
           var cookieInfo = [newOrder.name, newOrder.order, newOrder.notes];
           $cookies.put('mfcoffee', cookieInfo);
           newOrder.time = Firebase.ServerValue.TIMESTAMP;

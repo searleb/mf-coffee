@@ -38,6 +38,12 @@ md-list-item{
     background-position: center;
     color: #F9F9F9;
   }
+  &.bigmac{
+    background-image: url(../images/bigmac.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #F9F9F9;
+  }
 }
 .container{
   margin: auto;
