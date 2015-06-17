@@ -26,7 +26,7 @@
 <md-card ng-show="orders.length">
 	<md-list>
 		<md-list-item ng-repeat="order in orders | reverse">
-			<div flex class="md-list-item-text ng-class:{'whiskey': order.details.whiskey}" layout-padding>
+			<div flex class="md-list-item-text ng-class:{'whiskey': order.details.whiskey, 'bigmac' :order.details.bigmac}" layout-padding>
 			      <h3 class="md-headline">{{order.details.order}}</h3>
 			      <p class="md-caption">{{order.details.notes}}</p>
 			      <h4 class="md-subhead">{{order.details.name}}dog</h4>
