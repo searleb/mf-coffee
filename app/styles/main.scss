@@ -1,4 +1,4 @@
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 $media-xs: "(min-width : 480px)";
 
 /* Small Devices, Tablets */
@@ -48,15 +48,15 @@ md-list-item{
 .container{
   margin: auto;
   @media #{$media-xs}{
-    width: 95%
+    width: 95%;
   }
   @media #{$media-sm}{
-    width: 75%
+    width: 75%;
   }
   @media #{$media-md}{
-    width: 65%
+    width: 65%;
   }
   @media #{$media-lg}{
-    width: 50%
+    width: 50%;
   }
 }

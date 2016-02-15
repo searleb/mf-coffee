@@ -18,6 +18,7 @@ angular.module('mfcoffeeApp', [
     'firebase',
     'firebase.ref',
     'ngMaterial',
+    'ngMessages'
   ])
 .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')

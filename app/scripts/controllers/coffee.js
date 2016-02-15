@@ -14,7 +14,7 @@ angular.module('mfcoffeeApp')
 
     var myLastOrder = $cookies.get('mfcoffee');
     if (myLastOrder){
-      var myLastOrder = myLastOrder.split(',');
+      myLastOrder = myLastOrder.split(',');
       $scope.newOrder.name = myLastOrder[0];
       $scope.newOrder.order = myLastOrder[1];
       $scope.newOrder.notes = myLastOrder[2];
@@ -24,9 +24,9 @@ angular.module('mfcoffeeApp')
     $scope.empty = function(){
       var list = $scope.orders;
       for (var i = 0; i < list.length; i++) {
-        var item = list[i]
+        var item = list[i];
         list.$remove(item);
-      };
+      }
     };
 
     // display any errors
@@ -37,11 +37,11 @@ angular.module('mfcoffeeApp')
       if( newOrder ) {
           var isWhiskey = newOrder.order.toLowerCase().indexOf("whisk");
           var isBigMac = newOrder.order.toLowerCase().indexOf("big mac");
-          if (isWhiskey != -1) {
+          if (isWhiskey !== -1) {
             newOrder.whiskey = true;
           } else if (isBigMac != -1) {
-              newOrder.bigmac = true
-          };
+              newOrder.bigmac = true;
+          }
           var cookieInfo = [newOrder.name, newOrder.order, newOrder.notes];
           $cookies.put('mfcoffee', cookieInfo);
           newOrder.time = Firebase.ServerValue.TIMESTAMP;
@@ -57,7 +57,6 @@ angular.module('mfcoffeeApp')
       var toUpdate = $scope.orders.$indexFor(id);
       $scope.orders.$save(toUpdate);
     };
-    
 
     function alert(msg) {
       $scope.err = msg;
