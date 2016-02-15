@@ -11,52 +11,53 @@ $media-md: "(min-width : 992px)";
 $media-lg: "(min-width : 1200px)";
 
 body{
-  background-color: #F4F3EE;
-  color: #333333;
+   background-color: #F4F3EE;
+   color: #333333;
 }
 md-list{
-  padding: 0px;
+   padding: 0px;
 }
 md-icon{
-  height: 28px;
-  width: 33px;
+   height: 28px;
+   width: 33px;
 }
 md-list-item{
-  .md-no-style{
-    padding: 0px;
-  }
+   .md-no-style{
+      padding: 0px;
+   }
 }
 .md-list-item-text{
-  padding-bottom: 14px;
-  h3,h4,p{
-    text-transform: capitalize;
-    margin: 0px;
-  }
-  &.whiskey{
-    background-image: url(../images/whiskey.gif);
-    background-size: cover;
-    background-position: center;
-    color: #F9F9F9;
-  }
-  &.bigmac{
-    background-image: url(../images/bigmac.jpg);
-    background-size: cover;
-    background-position: center;
-    color: #F9F9F9;
-  }
+   padding-bottom: 14px;
+   h3,h4,p{
+      text-transform: capitalize;
+      margin: 0px;
+   }
+   &.whiskey{
+      background-image: url(../images/whiskey.gif);
+      background-size: cover;
+      background-position: center;
+      color: #F9F9F9;
+   }
+   &.bigmac{
+      background-image: url(../images/bigmac.jpg);
+      background-size: cover;
+      background-position: center;
+      color: #F9F9F9;
+   }
 }
 .container{
-  margin: auto;
-  @media #{$media-xs}{
-    width: 95%;
-  }
-  @media #{$media-sm}{
-    width: 75%;
-  }
-  @media #{$media-md}{
-    width: 65%;
-  }
-  @media #{$media-lg}{
-    width: 50%;
-  }
+   transition: width 0.5s ease;
+   margin: auto;
+   @media #{$media-xs}{
+      width: 95%;
+   }
+   @media #{$media-sm}{
+      width: 75%;
+   }
+   @media #{$media-md}{
+      width: 65%;
+   }
+   @media #{$media-lg}{
+      width: 50%;
+   }
 }
